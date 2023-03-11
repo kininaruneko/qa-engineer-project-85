@@ -14,7 +14,7 @@
     - Выбираем Game type - With a bot
     - Двигаем ползунок Time control - 10 min
     - В выпадающем списке выбираем тип задачи - rect_area
-    - Нажимаем кнопку "Create a game"
+    - Нажимаем кнопку "Create battle"
   expected-result: |
     Пользователь выбрал игру по уровню сложности
 
