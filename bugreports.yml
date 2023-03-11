@@ -1,0 +1,70 @@
+---
+- summary: |
+    Регистрация пользователя с невидимым email
+  environment: |
+    Google Chrome Версия 111.0.5563.64 (Официальная сборка), (64 бит)
+    Windows 11
+  steps-to-reproduce: |
+    1. Зайти на страницу https://codebattle.hexlet.io/
+    2. Нажать кнопку "Sigh up"
+    3. В поле Nickname ввести user45
+    4. В поле Email ввести "⠀⠀⠀⠀⠀⠀@⠀⠀⠀⠀.⠀⠀" (6 невидимых символа "⠀" подряд до "@", 4 до точки и 2 после точки)
+    5. В поле Password ввести пароль с валидными данными (123456)
+    6. Нажать кнопку "Submit"
+  expected-result: |
+    Появляется уведомление о недопустимых символах в поле Email
+  actual-result: |
+    Успешная регистрация пользователя с невидимым email
+    Ошибка изображена на скриншотах sighup_bug.png, sighup_bug2.png
+
+- summary: |
+    Регистрация пользователя с невидимым логином
+  environment: |
+    Google Chrome Версия 111.0.5563.64 (Официальная сборка), (64 бит)
+    Windows 11
+  steps-to-reproduce: |
+    1. Зайти на страницу https://codebattle.hexlet.io/
+    2. Нажать кнопку "Sigh up"
+    3. В поле Nickname ввести "⠀⠀⠀⠀⠀⠀" (6 невидимых символов)
+    4. В поле Email ввести "email@email.com"
+    5. В поле Password ввести пароль с валидными данными (123456)
+    6. Нажать кнопку "Submit"
+  expected-result: |
+    Появляется уведомление о недопустимых символах в поле Nickname
+  actual-result: |
+    Успешная регистрация пользователя с невидимым логином
+    Ошибка изображена на скриншоте login_bug.png
+
+- summary: |
+    Кнопка "Create Invite" активна при выборе баттла "With a friend" без указания противника
+  environment: |
+    Google Chrome Версия 111.0.5563.64 (Официальная сборка), (64 бит)
+    Windows 11
+  steps-to-reproduce: |
+    1. Авторизоваться на сайте https://codebattle.hexlet.io/
+    2. Нажать кнопку "Create a game" в правом верхнем углу
+    3. В модальном окне выбрать любой Level
+    4. Выбрать Game type - With a friend
+    5. Выбрать Time control с помощью ползунка
+    6. Нажать кнопку "Create Invite"
+  expected-result: |
+    Кнопка "Create Invite" неактивна.
+    Появляется уведомление о необходимости выбора противника.
+  actual-result: |
+    Кнопка "Create Invite" активна, модальное окно закрывается
+    
+- summary: |
+    Не реализована мобильная версия сайта
+  environment: |
+    Google Chrome Версия 111.0.5563.64 (Официальная сборка), (64 бит)
+    Windows 11
+  steps-to-reproduce: |
+    1. Авторизоваться на сайте https://codebattle.hexlet.io/
+    3. Открыть DevTools
+    4. Выбрать любое мобильное устройство
+  expected-result: |
+    Работает адаптивная верстка сайта
+    Страницу удобно просматривать с любого мобильного устройства
+  actual-result: |
+    Сайт не адаптирован под мобильные устройства
+    Ошибка изображена на скриншоте mainpage_bug.png
