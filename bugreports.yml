@@ -39,6 +39,7 @@
     Кнопка "Create Invite" активна при выборе баттла "With a friend" без указания противника
   environment: |
     Google Chrome Версия 111.0.5563.64 (Официальная сборка), (64 бит)
+    Яндекс Браузер Версия 23.1.0.2949 (64-bit)
     Windows 11
   steps-to-reproduce: |
     1. Авторизоваться на сайте https://codebattle.hexlet.io/
